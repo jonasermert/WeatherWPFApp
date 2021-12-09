@@ -5,8 +5,98 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherAPIWPFApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="512" Width="1024" ResizeMode="NoResize">
     <Grid>
+        
+        <Grid.ColumnDefinitions>
+            
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            
+            
+            
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+            
+            
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+            
+            
+            
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            
+            
+            
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+            
+            
+            
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+        
+        
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="20"></RowDefinition>
+            
+            
+            
+            <RowDefinition>
+                
+            </RowDefinition>
+            
+            
+            <RowDefinition>
+                
+            </RowDefinition>
+            
+            
+            <RowDefinition>
+                
+            </RowDefinition>
+            
+            
+            
+            <RowDefinition Height="20"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        
+        
+        
+        
+        
+        
+        
+        <Grid.Background>
+            <ImageBrush x:Name="backgroundImage" ImageSource="/WeatherAPIWPFApp.csproj;component/Images/Sun.png">
+                
+            </ImageBrush>
+        </Grid.Background>
+        
+        <Label x:Name="labelTemperature" Grid.Row="2" Grid.Column="1" Content="40°C" HorizontalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="5" BlurRadius="1" Color="Black" Opacity="0.95">
+                    
+                </DropShadowEffect>
+            </Label.Effect>
+        </Label>
+        
+        
+        <Label x:Name="labelInfo" Grid.Row="3" Grid.Column="1" Content="Cloudy" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="3" BlurRadius="1" Color="Black" Opacity="0.95">
+                    
+                </DropShadowEffect>
+            </Label.Effect>
+        </Label>
+        
+        
+        
         
     </Grid>
 </Window>
