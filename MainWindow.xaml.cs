@@ -29,7 +29,12 @@ namespace WeatherAPIWPFApp
         public MainWindow()
         {
             InitializeComponent();
+            UpdateUI("Erfurt");
+            ;
+        }
 
+        public void UpdateUI(string city)
+        {
             WeatherMapResponse result = GetWeatherData("Erfurt");
 
             string finalImage = "sun.png";
@@ -52,7 +57,6 @@ namespace WeatherAPIWPFApp
             labelTemperature.Content = result.main.temp.ToString("F1") + "°C";
 
             labelInfo.Content = result.weather[0].main;
-
         }
 
         public WeatherMapResponse GetWeatherData(string city)
@@ -67,6 +71,13 @@ namespace WeatherAPIWPFApp
             // Console.WriteLine(weatherMapResponse);
 
             return weatherMapResponse;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string query = textBoxQuery.Text;
+            
+            UpdateUI(query);
         }
     }
 }

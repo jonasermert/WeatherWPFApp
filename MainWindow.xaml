@@ -45,6 +45,8 @@
             <RowDefinition Height="20"></RowDefinition>
             
             
+            <RowDefinition Height="50"></RowDefinition>
+            
             
             <RowDefinition>
                 
@@ -78,7 +80,7 @@
             </ImageBrush>
         </Grid.Background>
         
-        <Label x:Name="labelTemperature" Grid.Row="2" Grid.Column="1" Content="40°C" HorizontalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White">
+        <Label x:Name="labelTemperature" Grid.Row="3" Grid.Column="1" Content="40°C" HorizontalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="5" BlurRadius="1" Color="Black" Opacity="0.95">
                     
@@ -87,7 +89,7 @@
         </Label>
         
         
-        <Label x:Name="labelInfo" Grid.Row="3" Grid.Column="1" Content="Cloudy" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" Foreground="White">
+        <Label x:Name="labelInfo" Grid.Row="4" Grid.Column="1" Content="Cloudy" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" Foreground="White">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="3" BlurRadius="1" Color="Black" Opacity="0.95">
                     
@@ -96,6 +98,14 @@
         </Label>
         
         
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Padding="5" CornerRadius="25" BorderThickness="1" Background="White">
+            <TextBox x:Name="textBoxQuery" Text="Erfurt" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" FontSize="30"  ></TextBox>
+        </Border>
+        
+        
+        <Border Grid.Row="1"  Grid.Column="4" Padding="5" CornerRadius="10" BorderThickness="1" Background="White">
+            <Button Click="Button_Click" Cursor="Hand" Background="Transparent" BorderThickness="0" Content="Suchen" FontSize="25" ></Button>
+        </Border>
         
         
     </Grid>
